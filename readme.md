@@ -52,6 +52,43 @@ launch.json:
         ]                
     }]
 
+tasks.json
+
+        "tasks": [
+                {
+                    "taskName": "install",
+                    "args": ["install"]
+                },
+                {
+                    "taskName": "update",
+                    "args": ["update"]
+                },
+                {
+                    "taskName": "test",
+                    "args": ["run", "test"]
+                },
+                {
+                    "taskName": "build", 
+                    "args": [
+                        "run", 
+                        "build"
+                    ]
+                },
+                {
+                    "taskName": "clean",
+                    "args": [
+                        "run", "clean"
+                    ]
+                },
+                {
+                    "taskName": "rebuild","args": [
+                        "run", "rebuild"
+                    ],
+                    "isBuildCommand": true
+                }
+            ]
+
+tsc:
 tsconfig:
 
     {
