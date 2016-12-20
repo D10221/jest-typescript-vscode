@@ -1,20 +1,15 @@
-package.json initially:
+started from: [https://github.com/facebook/jest/tree/master/examples/typescript/](https://github.com/facebook/jest/tree/master/examples/typescript/)
 
-
-    "jest":{
-        "testRegex": ".*\\.test\\.(ts|tsx|js)$",
-        "transform": {
-        "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
-        },
-        "moduleFileExtensions": [
-        "ts",
-        "tsx",
-        "js"
-        ]
+package.json:
+    
+    "scripts": {
+    "test": "node_modules/.bin/jest.cmd",
+    "build": "tsc -p .",
+    "clean": "rimraf ./built",
+    "rebuild": "npm run clean && npm run build"
     },
 
-
-to:
+...
 
     "jest": {
         "moduleFileExtensions": [      
@@ -22,6 +17,14 @@ to:
         ],    
         "testRegex": ".*\\.test\\.(ts|js)$"
     }
+
+types:
+
+    @types/jest,
+    @types/node,
+    @types/react,
+    @types/react-addons-test-utils,
+    @types/react-dom,    
 
 vscode:
 
