@@ -1,30 +1,40 @@
 import * as React from "react";
 
-interface CheckboxWithLabelProps extends React.Props<any> {
+export interface CheckboxWithLabelProps extends React.Props<any> {
   labelOff: string;
   labelOn: string;
 }
 
-const CheckboxWithLabel = React.createClass<CheckboxWithLabelProps, any>( {
-  getInitialState: function() {
-    return {isChecked: false};
-  },
-  onChange: function() {
-    this.setState({isChecked: !this.state.isChecked});
-  },
+export default class CheckboxWithLabel extends React.Component<CheckboxWithLabelProps, any> {
 
-  render: function() {
+  constructor(props: CheckboxWithLabelProps) {
+    super(props);
+    this.state = this.getInitialState();
+  }
+
+  getInitialState() {
+    return {
+      isChecked: false
+    };
+  }
+
+  onChange = () => {
+    this.setState({ isChecked: !this.state.isChecked });
+  }
+
+  render() {
+   const self = this;
+   const state = this.state;
+   const props = this.props;
     return (
       <label>
         <input
           type="checkbox"
-          checked={this.state.isChecked}
-          onChange={this.onChange}
-        />
-        {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
+          checked={state.isChecked}
+          onChange={self.onChange}
+          />
+        { state.isChecked ? props.labelOn : props.labelOff }
       </label>
     );
   }
-});
-
-export = CheckboxWithLabel;
+}

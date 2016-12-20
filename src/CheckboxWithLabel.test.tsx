@@ -2,12 +2,13 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as TestUtils from "react-addons-test-utils";
 
-import * as CheckboxWithLabel from "./CheckboxWithLabel";
+import CheckboxWithLabel from "./CheckboxWithLabel";
 
 it("CheckboxWithLabel changes the text after click", () => {
   debugger;
+
   // Render a checkbox with label in the document
-  const checkbox:any = TestUtils.renderIntoDocument(
+  const checkbox: any = TestUtils.renderIntoDocument(
     <CheckboxWithLabel labelOn="On" labelOff="Off" />
   );
 
@@ -20,5 +21,6 @@ it("CheckboxWithLabel changes the text after click", () => {
   TestUtils.Simulate.change(
     TestUtils.findRenderedDOMComponentWithTag(checkbox, "input")
   );
+
   expect(checkboxNode.textContent).toEqual("On");
 });

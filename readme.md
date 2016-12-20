@@ -89,7 +89,7 @@ tasks.json
             ]
 
 tsc:
-tsconfig:
+tsconfig.json:
 
     {
         "compilerOptions": {
