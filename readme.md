@@ -101,7 +101,7 @@ tsconfig.json:
             "outDir": "./built",
             "noUnusedLocals": true,
             "noUnusedParameters": true,       
-            // "noImplicitThis": true, 
+            "noImplicitThis": true, 
             "noImplicitReturns": true,
             "noFallthroughCasesInSwitch": true,
             "emitDecoratorMetadata": true,
