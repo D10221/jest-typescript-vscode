@@ -1,3 +1,5 @@
+// from: https://facebook.github.io/jest/docs/tutorial-react.html
+
 import * as React from "react";
 
 export type Status = "normal" | "hovered";

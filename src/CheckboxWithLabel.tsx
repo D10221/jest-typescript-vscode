@@ -9,11 +9,7 @@ export default class CheckboxWithLabel extends React.Component<CheckboxWithLabel
 
   constructor(props: CheckboxWithLabelProps) {
     super(props);
-    this.state = this.getInitialState();
-  }
-
-  getInitialState() {
-    return {
+    this.state = {
       isChecked: false
     };
   }
