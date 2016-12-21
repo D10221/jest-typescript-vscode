@@ -3,7 +3,7 @@
     // for the documentation about the tasks.json format
     "version": "0.1.0",
     "command": "npm",
-    "isShellCommand": true,
+    "isShellCommand": true,    
     "showOutput": "always",
     "suppressTaskName": true,
     "tasks": [
@@ -17,7 +17,8 @@
         },
         {
             "taskName": "test",
-            "args": ["run", "test" ]
+            "args": ["run", "test" ],
+            "isTestCommand": false
         },
         {
             "taskName": "build", 
@@ -41,6 +42,12 @@
             "args": [
                 "run", "rebundle"
             ]
+        },{
+            "taskName": "retest",
+            "args": [
+                "run", "retest"
+            ],
+            "isTestCommand": true            
         }
     ]
 }
