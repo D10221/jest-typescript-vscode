@@ -4,7 +4,7 @@
         "target": "es6",
         "moduleResolution": "node",
         "noImplicitAny": true,
-        "inlineSourceMap": true,
+        "sourceMap": true,
         "outDir": "./built",
         "noUnusedLocals": true,
         "noUnusedParameters": true,       

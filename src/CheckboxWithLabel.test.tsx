@@ -8,9 +8,9 @@ it("CheckboxWithLabel changes the text after click", () => {
   debugger;
 
   // Render a checkbox with label in the document
-  const checkbox: any = TestUtils.renderIntoDocument(
+  const checkbox = TestUtils.renderIntoDocument(
     <CheckboxWithLabel labelOn="On" labelOff="Off" />
-  );
+  ) as CheckboxWithLabel;
 
   const checkboxNode = ReactDOM.findDOMNode(checkbox);
 

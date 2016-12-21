@@ -17,26 +17,30 @@
         },
         {
             "taskName": "test",
-            "args": ["run", "test"]
+            "args": ["run", "test" ]
         },
         {
             "taskName": "build", 
-            "args": [
-                "run", 
-                "build"
-            ]
+            "args": [ "run", "build" ]
         },
         {
             "taskName": "clean",
-            "args": [
-                "run", "clean"
-            ]
+            "args": [ "run", "clean" ]
         },
         {
-            "taskName": "rebuild","args": [
-                "run", "rebuild"
-            ],
+            "taskName": "rebuild",
+            "args": [ "run", "rebuild" ],
             "isBuildCommand": true
+        },{
+            "taskName": "bundle",
+            "args": [
+                "run", "bundle"
+            ]
+        },{
+            "taskName": "rebundle",
+            "args": [
+                "run", "rebundle"
+            ]
         }
     ]
 }

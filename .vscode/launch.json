@@ -1,35 +1,40 @@
 {
-    // Use IntelliSense to learn about possible Node.js debug attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [{
-        "type": "node",
+        // Launch Chrome with temp profile against localhost, with sourcemaps and debug enabled
+        "name": "chrome",
+        "windows": {
+            "runtimeExecutable": "${env.CHROME_HOME}\\chrome.exe",
+            "runtimeArgs": [
+                "-remote-debugging-port=9222",
+                "--user-data-dir=${env.USERPROFILE}/.tmp/remote-profile"
+            ]
+        },
+        "linux": {
+            "runtimeExecutable": "chrome",
+            "runtimeArgs": [
+                "-remote-debugging-port=9222",
+                "--user-data-dir=~/.tmp/remote-profile"
+            ]
+        },
+        "runtimeArgs": [],
+        "type": "chrome",
         "request": "launch",
-        "name": "Launch Program",
-        "program": "${workspaceRoot}\\index.js",
-        "cwd": "${workspaceRoot}",
-        "outFiles": [],
-        "sourceMaps": true
+        "url": "http://localhost:8080",
+        "sourceMaps": true,
+        "webRoot": "${workspaceRoot}",
+        "preLaunchTask": "rebundle"
     }, {
-        "type": "node",
-        "request": "attach",
-        "name": "Attach to Process",
-        "port": 5858,
-        "outFiles": [],
-        "sourceMaps": true
-    }, 
-    {
         "name": "Jest",
         "type": "node",
         "request": "launch",
         "program": "${workspaceRoot}/node_modules/jest-cli/bin/jest.js",
         "stopOnEntry": false,
         "args": [
-            "--runInBand"            
+            "--runInBand"
         ],
         "cwd": "${workspaceRoot}",
-        "preLaunchTask": "rebuild",        
+        "preLaunchTask": "rebuild",
         "env": {
             "NODE_ENV": "development"
         },
@@ -37,6 +42,6 @@
         "sourceMaps": true,
         "outFiles": [
             "${workspaceRoot}/built/**/*.js"
-        ]                
+        ]
     }]
 }

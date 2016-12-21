@@ -1,5 +1,8 @@
 started from: [https://github.com/facebook/jest/tree/master/examples/typescript/](https://github.com/facebook/jest/tree/master/examples/typescript/)
 
+## F5 configuration React Jest Typescript on  vscode with working breakpoimts:
+#### <i>... a tiny Dojo</i> (道場 dōjō?)
+
 package.json:
     
     "scripts": {
@@ -112,3 +115,6 @@ tsconfig.json:
             "node_modules", "./built"
         ]
     }    
+
+Notes:
+- on Windows set environment variable CHROME_HOME to..., usually "C:\\Program Files (x86)\\Google\\Chrome\\Application" 
